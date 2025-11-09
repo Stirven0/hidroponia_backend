@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'sensores',
     'actuadores',
     'alertas',
+    'soluciones',
     'maestra',
 ]
 
@@ -98,6 +99,7 @@ MIGRATION_MODULES = {
     'cultivos': None,
     'sensores': None,
     'actuadores': None,
+    'soluciones': None,
     'alertas': None,
     'maestra': None,
 }

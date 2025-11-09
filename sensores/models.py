@@ -12,7 +12,10 @@ class Sensor(models.Model):
     class Meta:
         db_table = 'Sensor'
         managed = False
-        app_label = 'sensor'
+        app_label = 'sensores'
+        
+    def __str__(self):
+        return f"{self.nombre}"
 
 class LecturaSensor(models.Model):
     sensor = models.ForeignKey(Sensor, on_delete=models.DO_NOTHING)
@@ -23,4 +26,4 @@ class LecturaSensor(models.Model):
     class Meta:
         db_table = 'Lectura_Sensor'
         managed = False
-        app_label = 'lectura_sensor'
+        app_label = 'sensores'

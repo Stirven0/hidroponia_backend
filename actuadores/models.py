@@ -11,4 +11,4 @@ class Actuador(models.Model):
     class Meta:
         db_table = 'Actuador'
         managed = False
-        app_label = 'actuador'
+        app_label = 'actuadores'

@@ -16,6 +16,9 @@ class Maestra(models.Model):
         unique_together = (('nombre', 'tipo_maestra'),)
         managed = False
         app_label = 'maestra'
+        
+    def __str__(self):  # ← agregá esta línea
+        return f"{self.nombre}"
 
 class ParametroCultivo(models.Model):
     tipo_cultivo_maestra = models.ForeignKey(Maestra, on_delete=models.DO_NOTHING, related_name='parametros_tipo')
@@ -32,4 +35,4 @@ class ParametroCultivo(models.Model):
         db_table = 'Parametro_Cultivo'
         unique_together = (('tipo_cultivo_maestra', 'parametro'),)
         managed = False
-        app_label = 'parametro_cultivo'
+        app_label = 'maestra'

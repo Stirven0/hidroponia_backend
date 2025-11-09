@@ -13,4 +13,4 @@ class AlertaSistema(models.Model):
     class Meta:
         db_table = 'Alerta_Sistema'
         managed = False
-        app_label = 'alerta_sistema'
+        app_label = 'alertas'
